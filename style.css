@@ -8,35 +8,35 @@
   --bg-card: rgba(15, 23, 42, 0.75);
   --bg-card-hover: rgba(26, 38, 66, 0.85);
   --bg-input: rgba(15, 23, 42, 0.9);
-  
+
   --primary: #00e676;
   --primary-glow: rgba(0, 230, 118, 0.35);
   --primary-hover: #00c853;
-  
+
   --secondary: #00e5ff;
   --secondary-glow: rgba(0, 229, 255, 0.35);
-  
+
   --accent: #3d5afe;
   --accent-glow: rgba(61, 90, 254, 0.3);
-  
+
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
-  
+
   --border-color: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(0, 230, 118, 0.4);
-  
+
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  
+
   /* Layout & Spacing */
   --container-max: 1240px;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -44,7 +44,9 @@
 }
 
 /* Reset & Base Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -72,7 +74,7 @@ body::before {
   left: 10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--primary-glow) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, var(--primary-glow) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: -1;
   pointer-events: none;
   filter: blur(80px);
@@ -85,7 +87,7 @@ body::after {
   right: 10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--secondary-glow) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, var(--secondary-glow) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: -1;
   pointer-events: none;
   filter: blur(80px);
@@ -100,7 +102,12 @@ body::after {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: #ffffff;
   font-weight: 700;
@@ -147,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 35px var(--primary-glow), 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 35px var(--primary-glow), 0 5px 15px rgba(0, 0, 0, 0.5);
   color: #000;
 }
 
@@ -297,9 +304,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse {
-  0% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .hero-title {
@@ -383,8 +401,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .card-icon {
@@ -585,7 +610,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
   backdrop-filter: blur(12px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .calc-controls {
@@ -642,7 +667,8 @@ input[type="range"] {
   transition: var(--transition-fast);
 }
 
-.type-btn.active, .type-btn:hover {
+.type-btn.active,
+.type-btn:hover {
   background: rgba(0, 230, 118, 0.15);
   border-color: var(--primary);
   color: #ffffff;
@@ -723,7 +749,8 @@ input[type="range"] {
   transition: var(--transition-normal);
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #040d1a;
   border-color: transparent;
@@ -747,8 +774,15 @@ input[type="range"] {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tab-info h3 {
@@ -1091,7 +1125,10 @@ input[type="range"] {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .hero-grid, .calc-box, .tab-content.active {
+
+  .hero-grid,
+  .calc-box,
+  .tab-content.active {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
@@ -1122,6 +1159,7 @@ input[type="range"] {
     left: 0;
   }
 
+  /* mobile */
   .mobile-toggle {
     display: block;
   }
