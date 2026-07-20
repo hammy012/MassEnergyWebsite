@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mass Energy - Next-Gen Clean Energy & Power Solutions</title>
+  <meta name="description" content="Mass Energy provides high-efficiency solar, wind, battery storage, and smart grid power solutions for residential, commercial, and industrial clients.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div class="logo-text">MASS <span>ENERGY</span></div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Solutions</a></li>
+        <li><a href="#calculator">ROI Calculator</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#testimonials">Impact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm" id="openModalBtn">
+          <span>Get Free Consultation</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>⚡ 100% Clean & Intelligent Energy</span>
+          </div>
+          <h1 class="hero-title">
+            Powering the Future with <span class="gradient-text">Mass Energy</span>
+          </h1>
+          <p class="hero-description">
+            Cut your utility costs by up to 75% with zero-down solar power, modular battery microgrids, and AI-driven energy management for homes & enterprises.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('calculator')">
+              <span>Calculate Savings</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </button>
+            <a href="#services" class="btn btn-secondary">
+              <span>Explore Solutions</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num" data-target="150">0</div>
+              <div class="stat-label">MW Total Capacity Installed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="12000">0</div>
+              <div class="stat-label">Satisfied Homes & Businesses</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="99">0</div>
+              <div class="stat-label">% Microgrid Uptime Guarantee</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-wrapper">
+            <img src="assets/hero-bg.png" alt="Mass Energy Futuristic Renewable Power Grid">
+          </div>
+
+          <div class="floating-card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="card-title">Live Carbon Reduced</div>
+              <div class="card-sub" id="co2Counter">142,590 Tons CO₂ Saved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Status Ticker -->
+  <div class="ticker-bar">
+    <div class="container">
+      <div class="ticker-grid">
+        <div class="ticker-item">
+          <div class="ticker-icon">☀️</div>
+          <div class="ticker-text">
+            <div class="ticker-val" id="solarOutput">48.2 MWh</div>
+            <div class="ticker-lbl">Solar Generation Today</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">🔋</div>
+          <div class="ticker-text">
+            <div class="ticker-val">98.4% Efficiency</div>
+            <div class="ticker-lbl">Battery Reserve Status</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">⚡</div>
+          <div class="ticker-text">
+            <div class="ticker-val">$4.2M Saved</div>
+            <div class="ticker-lbl">Customer Utility Savings 2026</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">🌱</div>
+          <div class="ticker-text">
+            <div class="ticker-val">Net Zero Ready</div>
+            <div class="ticker-lbl">Smart Grid Protocol v4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Our Engineering Solutions</div>
+        <h2 class="section-title">Next-Gen Energy Architecture</h2>
+        <p class="section-desc">From intelligent solar rooftops to utility-scale storage arrays, Mass Energy delivers end-to-end sustainable power platforms.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h3 class="service-title">High-Efficiency Solar Systems</h3>
+          <p class="service-desc">Ultra-pure silicon solar arrays with 24.5% conversion efficiency, engineered to maximize energy harvest even under low sunlight conditions.</p>
+          <a href="#calculator" class="service-link">
+            <span>Explore Rooftop Solar</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+          </div>
+          <h3 class="service-title">Mass Vault™ Battery Storage</h3>
+          <p class="service-desc">LFP battery technology with 15-year thermal stability. Store surplus day power and ride through grid blackouts effortlessly.</p>
+          <a href="#calculator" class="service-link">
+            <span>Discover Storage Systems</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+          </div>
+          <h3 class="service-title">AI Smart Grid Optimization</h3>
+          <p class="service-desc">Autonomous power routing software that dynamically trades excess energy back to the grid when utility rates surge peak pricing.</p>
+          <a href="#technology" class="service-link">
+            <span>Learn About Smart Grid</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ROI & Savings Calculator -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Financial Savings</div>
+        <h2 class="section-title">Estimate Your Energy ROI</h2>
+        <p class="section-desc">Adjust the controls below to calculate potential bill savings and environmental impact with Mass Energy.</p>
+      </div>
+
+      <div class="calc-box">
+        <div class="calc-controls">
+          <div class="form-group">
+            <label class="form-label">
+              <span>Average Monthly Electricity Bill:</span>
+              <strong id="billVal">$350/mo</strong>
+            </label>
+            <input type="range" id="billSlider" min="100" max="2500" step="50" value="350">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Property Type:</label>
+            <div class="calc-types">
+              <button class="type-btn active" data-rate="0.75" onclick="setPropType(this)">Residential</button>
+              <button class="type-btn" data-rate="0.85" onclick="setPropType(this)">Commercial</button>
+              <button class="type-btn" data-rate="0.92" onclick="setPropType(this)">Industrial</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              <span>Estimated Roof / Field Space (sq ft):</span>
+              <strong id="spaceVal">1,200 sq ft</strong>
+            </label>
+            <input type="range" id="spaceSlider" min="300" max="10000" step="100" value="1200">
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="result-card">
+            <div class="result-title">Estimated 25-Year Net Savings</div>
+            <div class="result-val" id="annualSavings">$84,000</div>
+          </div>
+
+          <div class="result-metrics">
+            <div>
+              <div class="metric-val" id="recCapacity">8.5 kW</div>
+              <div class="metric-lbl">Recommended Array</div>
+            </div>
+            <div>
+              <div class="metric-val" id="paybackTime">3.8 Years</div>
+              <div class="metric-lbl">Est. Payback Period</div>
+            </div>
+            <div>
+              <div class="metric-val" id="treeEquivalent">1,420 Trees</div>
+              <div class="metric-lbl">CO₂ Equivalent Offset</div>
+            </div>
+            <div>
+              <div class="metric-val" id="taxCredit">$3,600</div>
+              <div class="metric-lbl">Potential Incentive</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="openConsultationModal()">
+            <span>Claim Your Detailed Quote</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Technology Features Section -->
+  <section class="features-section" id="technology">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Cutting-Edge Tech</div>
+        <h2 class="section-title">Engineered for Maximum Reliability</h2>
+        <p class="section-desc">Explore how our integrated ecosystem outperforms conventional power solutions.</p>
+      </div>
+
+      <div class="tabs-wrapper">
+        <button class="tab-btn active" onclick="switchTab('tab1', this)">N-Type Solar Architecture</button>
+        <button class="tab-btn" onclick="switchTab('tab2', this)">Mass Vault™ Microgrid</button>
+        <button class="tab-btn" onclick="switchTab('tab3', this)">AI Cloud Management</button>
+      </div>
+
+      <!-- Tab Content 1 -->
+      <div class="tab-content active" id="tab1">
+        <div class="tab-info">
+          <h3>N-Type TOPCon Cell Breakthrough</h3>
+          <p>Mass Energy utilizes N-type TOPCon solar cells engineered to virtually eliminate light-induced degradation, delivering top-tier performance for 30+ years.</p>
+          <ul class="tab-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              24.5% Module Efficiency Rating
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Low-light performance optimized for cloudy climate
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              30-Year Performance Guarantee (87.4% Output retention)
+            </li>
+          </ul>
+        </div>
+        <div class="tab-visual-box">
+          <div style="font-family: var(--font-heading); color: var(--primary); font-weight:700; margin-bottom:1rem;">Efficiency Comparison</div>
+          <div style="margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.25rem;">
+              <span>Mass Energy N-Type</span>
+              <span style="color:var(--primary); font-weight:700;">24.5%</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); height:10px; border-radius:5px; overflow:hidden;">
+              <div style="background:var(--primary); width:95%; height:100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.25rem;">
+              <span>Standard PERC Solar</span>
+              <span style="color:var(--text-muted);">19.8%</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); height:10px; border-radius:5px; overflow:hidden;">
+              <div style="background:var(--text-muted); width:70%; height:100%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 2 -->
+      <div class="tab-content" id="tab2">
+        <div class="tab-info">
+          <h3>Mass Vault™ Battery Safety & Longevity</h3>
+          <p>Built with Cobalt-Free Lithium Iron Phosphate (LiFePO4) chemistry designed to resist extreme thermal events while sustaining over 8,000 full charge cycles.</p>
+          <ul class="tab-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Sub-10ms automatic blackout switchover
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Modular expandable design from 10 kWh to 2 MWh
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              IP67 weather resistant casing for harsh outdoors
+            </li>
+          </ul>
+        </div>
+        <div class="tab-visual-box">
+          <div style="font-family: var(--font-heading); color: var(--secondary); font-weight:700; margin-bottom:1rem;">Battery Cycle Life</div>
+          <div style="margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.25rem;">
+              <span>Mass Vault LFP</span>
+              <span style="color:var(--secondary); font-weight:700;">8,000+ Cycles</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); height:10px; border-radius:5px; overflow:hidden;">
+              <div style="background:var(--secondary); width:90%; height:100%;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.25rem;">
+              <span>Conventional NMC Battery</span>
+              <span style="color:var(--text-muted);">2,500 Cycles</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); height:10px; border-radius:5px; overflow:hidden;">
+              <div style="background:var(--text-muted); width:35%; height:100%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 3 -->
+      <div class="tab-content" id="tab3">
+        <div class="tab-info">
+          <h3>AI MassIQ Cloud OS</h3>
+          <p>Real-time analytics monitor weather patterns, peak grid electricity rates, and household consumption habits to automatically lower your power bill.</p>
+          <ul class="tab-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Predictive solar forecasting via satellite data
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Automated Virtual Power Plant (VPP) earnings
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Mobile App control for iOS & Android
+            </li>
+          </ul>
+        </div>
+        <div class="tab-visual-box">
+          <div style="font-family: var(--font-heading); color: var(--primary); font-weight:700; margin-bottom:1rem;">Energy Optimization Status</div>
+          <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.85rem;">
+            <div style="display:flex; justify-content:space-between;">
+              <span style="color:var(--text-muted)">Peak Tariff Shaving:</span>
+              <span style="color:var(--primary)">Active (Saving 42%)</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="color:var(--text-muted)">Grid Feed-in Tariff:</span>
+              <span style="color:var(--secondary)">$0.14 / kWh Export</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="color:var(--text-muted)">AI Health Monitor:</span>
+              <span style="color:#00e676">Optimal (100% Efficiency)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Real Results</div>
+        <h2 class="section-title">Trusted by Thousands Across the Globe</h2>
+        <p class="section-desc">Read how Mass Energy transforms residential and commercial energy independence.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testi-card">
+          <p class="testi-text">"Mass Energy slashed our factory's monthly power bill from $12,500 down to under $2,100. The payback period was even faster than their initial estimate!"</p>
+          <div class="testi-author">
+            <div class="avatar">DA</div>
+            <div class="author-info">
+              <h4>David Anderson</h4>
+              <p>VP Operations, Nexus Manufacturing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-text">"During last winter's major storm outage, our home stayed completely powered for 3 straight days thanks to Mass Vault. Seamless switchover!"</p>
+          <div class="testi-author">
+            <div class="avatar">SJ</div>
+            <div class="author-info">
+              <h4>Sarah Jenkins</h4>
+              <p>Homeowner, Austin TX</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-text">"The AI mobile app makes tracking generation effortless. Being able to sell excess solar energy back to the grid has given us a monthly passive income."</p>
+          <div class="testi-author">
+            <div class="avatar">MR</div>
+            <div class="author-info">
+              <h4>Michael Roberts</h4>
+              <p>Commercial Property Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Got Questions?</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How much can I expect to save with a Mass Energy Solar System?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most residential clients reduce their monthly power bills by 60% to 90%. Commercial clients often see a 70%+ reduction depending on system sizing and local grid incentives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens during power outages or net grid failures?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>When paired with Mass Vault™ battery backup, your system detects the blackout in under 10 milliseconds and automatically isolates your home to keep lights, refrigerators, and essential appliances online seamlessly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What warranty coverage is included?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>All Mass Energy solar panels carry a 30-year Linear Power Warranty. Mass Vault battery systems include a 15-year full replacement warranty.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are zero-down financing options available?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We offer $0-down solar power purchase agreements (PPAs), low-interest green energy loans, and lease options so you can start saving from Day 1.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-title">Ready to Take Control of Your Energy?</h2>
+        <p class="cta-desc">Schedule a free 15-minute energy audit with our certified engineers and discover your customized clean energy blueprint.</p>
+        <button class="btn btn-primary" onclick="openConsultationModal()">
+          <span>Request Free Energy Audit</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <div class="logo-text">MASS <span>ENERGY</span></div>
+          </a>
+          <p>Accelerating global transition to 100% renewable microgrid power through advanced hardware & AI software.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Residential Solar</a></li>
+            <li><a href="#services">Commercial Microgrids</a></li>
+            <li><a href="#services">Mass Vault Storage</a></li>
+            <li><a href="#technology">Smart Grid OS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#testimonials">Case Studies</a></li>
+            <li><a href="#faq">Sustainability Report</a></li>
+            <li><a href="#" onclick="openConsultationModal(); return false;">Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@massenergy.com">info@massenergy.com</a></li>
+            <li><a href="tel:+18005556277">+1 (800) 555-MASS</a></li>
+            <li><span>Global HQ: Energy Way, Austin TX</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mass Energy Inc. All Rights Reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" style="color:var(--text-muted); text-decoration:none;">Privacy Policy</a>
+          <a href="#" style="color:var(--text-muted); text-decoration:none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Component -->
+  <div class="modal-overlay" id="consultModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeConsultationModal()">&times;</button>
+      <div class="modal-header">
+        <h3>Get Free Energy Consultation</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Fill out your details to get an instant customized proposal.</p>
+      </div>
+      <form id="consultForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label style="font-size:0.85rem; font-weight:600;">Full Name</label>
+          <input type="text" class="input-field" placeholder="John Doe" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label style="font-size:0.85rem; font-weight:600;">Email Address</label>
+          <input type="email" class="input-field" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label style="font-size:0.85rem; font-weight:600;">Monthly Bill ($)</label>
+          <input type="number" class="input-field" placeholder="350" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <span>Submit Request</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    🎉 Consultation Request Submitted! Our engineer will call you shortly.
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
