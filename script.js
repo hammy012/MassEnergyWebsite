@@ -1,7 +1,7 @@
 /* ==========================================================================
    MASS ENERGY - Interactive JavaScript Controller
    ========================================================================== */
-
+// done
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initCalculator();
